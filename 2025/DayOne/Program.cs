@@ -2,7 +2,7 @@
 
 using DayOne;
 
-var dial = new Dial()
+var dial = new DialStageTwo()
 {
     Max = 99,
     Min = 0,
@@ -15,13 +15,10 @@ int password = 0;
 Console.WriteLine($"Dial starts at:{dial.Position}");
 foreach (var step in steps)
 {
-    var atZero = dial.Turn(step);
-    if (atZero)
-    {
-        password++;
-    }
+    var result = dial.Turn(step);
+    password += result;
 
-    Console.WriteLine($"Dial is rotated {step.Direction}{step.Amount} to {dial.Position}. At Zero {atZero}");
+    Console.WriteLine($"Dial is rotated {step.Direction}{step.Amount} to {dial.Position}. Passed 0:{result} times");
 }
 
 Console.WriteLine($"Password: {password}");
