@@ -1,6 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
-using DayOneStageTwo;;
+using DayOneStageTwo;
 
 var dial = new Dial()
 {
