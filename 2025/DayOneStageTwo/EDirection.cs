@@ -1,4 +1,4 @@
-namespace DayOneStageTwo;;
+namespace DayOneStageTwo;
 
 public enum EDirection
 {
